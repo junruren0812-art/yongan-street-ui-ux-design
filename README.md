@@ -1,1 +1,57 @@
+# yongan-street-ui-ux-design
 
+永安街游戏 UI/UX 产品设计仓库，用于统一管理界面设计文档、线框图和版本变更记录。
+
+## 仓库目录
+
+```text
+yongan-street-ui-ux-design/
+├── README.md
+├── docs/
+│   └── UI/
+│       └── main-scene/
+│           ├── v0.6.md
+│           └── v0.7.md
+├── assets/
+│   └── wireframe/
+│       └── main-scene/
+│           ├── v0.6.png
+│           └── v0.7.png
+└── changelog.md
+```
+
+## 页面索引
+
+| 页面 | 当前版本 | 设计文档 | 线框图 | 状态 |
+|---|---|---|---|---|
+| 主场景 | v0.7 | [查看文档](docs/UI/main-scene/v0.7.md) | [查看线框图](assets/wireframe/main-scene/v0.7.png) | 设计中 |
+
+## 历史版本
+
+- 主场景 v0.6：[设计文档](docs/UI/main-scene/v0.6.md) · [线框图](assets/wireframe/main-scene/v0.6.png)
+- 主场景 v0.7：[设计文档](docs/UI/main-scene/v0.7.md) · [线框图](assets/wireframe/main-scene/v0.7.png)
+
+## 目录说明
+
+- `docs/UI/`：UI 页面设计与交互说明
+- `assets/wireframe/`：页面线框图与设计图片
+- `changelog.md`：版本变更记录
+
+## 文件命名规范
+
+- 页面目录使用小写英文和连字符，例如 `main-scene`
+- 设计文档与线框图使用相同版本号
+- 新版本不覆盖旧版本，例如从 `v0.6` 新增到 `v0.7`
+
+## 当前进度
+
+- [x] 建立项目目录
+- [x] 创建主场景 v0.6、v0.7 基础文档
+- [x] 创建主场景 v0.6、v0.7 线框图占位文件
+- [ ] 用正式线框图替换占位文件
+- [ ] 完善主场景功能与交互说明
+- [ ] 完成设计评审
+
+## 维护者
+
+任俊茹

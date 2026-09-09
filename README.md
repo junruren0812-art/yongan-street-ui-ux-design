@@ -11,6 +11,9 @@ yongan-street-ui-ux-design/
 │   └── UI/
 │       └── main-scene/
 │           ├── v0.6.md
+│           ├── v0.6/
+│           │   ├── figma-page-tree.md
+│           │   └── figma-ui-spec.md
 │           └── v0.7.md
 ├── assets/
 │   └── wireframe/
@@ -28,7 +31,7 @@ yongan-street-ui-ux-design/
 
 ## 历史版本
 
-- 主场景 v0.6：[设计文档](docs/UI/main-scene/v0.6.md) · [线框图](assets/wireframe/main-scene/v0.6.png)
+- 主场景 v0.6：[设计文档](docs/UI/main-scene/v0.6.md) · [Figma 页面树](docs/UI/main-scene/v0.6/figma-page-tree.md) · [Figma UI 规格](docs/UI/main-scene/v0.6/figma-ui-spec.md) · [线框图](assets/wireframe/main-scene/v0.6.png)
 - 主场景 v0.7：[设计文档](docs/UI/main-scene/v0.7.md) · [线框图](assets/wireframe/main-scene/v0.7.png)
 
 ## 目录说明
@@ -47,9 +50,10 @@ yongan-street-ui-ux-design/
 
 - [x] 建立项目目录
 - [x] 创建主场景 v0.6、v0.7 基础文档
-- [x] 创建主场景 v0.6、v0.7 线框图占位文件
-- [ ] 用正式线框图替换占位文件
-- [ ] 完善主场景功能与交互说明
+- [x] 归档主场景 v0.6 Figma 页面树和 UI 规格
+- [x] 用 Figma 画板截图替换 v0.6 占位图片
+- [ ] 用正式线框图替换 v0.7 占位图片
+- [ ] 完善 v0.7 主场景功能与交互说明
 - [ ] 完成设计评审
 
 ## 维护者

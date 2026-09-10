@@ -2,6 +2,26 @@
 
 本文件用于记录永安街游戏 UI/UX 设计版本变化，最新版本位于最上方。
 
+## 主场景 v0.7 状态线框完成 — 2026-09-10
+
+### 新增
+
+- 在 Figma 中保留 v0.6，并新增 `Main Scene / Wireframe v0.7` 页面
+- 完成 Enter、Exploration、Price List Available／Selected／Inspection／After Read、After Clue 与 D104 Unlocked 共 8 个状态线框
+- 补充 v0.7 状态转换、HUD 规则与交互反馈链说明
+
+### 调整
+
+- 用正式八状态总览替换 `assets/wireframe/main-scene/v0.7.png` 占位图
+- 将 v0.7 文档状态更新为“待评审”
+- 在 Round 01 修改清单中标记 8 个最低状态线框已完成
+
+### 待确认
+
+- 物件信息页与 Notebook 的系统关系
+- “回忆／对话”触发与结果、线索正式写入时机、D104 未解锁选项表现
+- 吴莉“倾听／对话”差异，以及手柄与触屏输入范围
+
 ## 主场景 v0.6 Round 01 评审完成 — 2026-09-10
 
 ### 评审结论

@@ -49,14 +49,14 @@
 
 # v0.7 最低状态线框清单
 
-- [ ] `01_MainScene_Enter`：从地图进入美丽理发店
-- [ ] `02_MainScene_Exploration`：自由观察并选择人物或物件
-- [ ] `03_Object_PriceList_Available`：价目表高亮并显示互动 Icon
-- [ ] `04_Object_PriceList_Selected`：玩家聚焦或选中价目表
-- [ ] `05_Object_PriceList_Inspection`：笔记本式物件信息页
-- [ ] `06_Object_PriceList_AfterRead`：出现“回忆／对话”操作
-- [ ] `07_MainScene_Exploration_AfterClue`：返回场景并保留已查看／已理解状态
-- [ ] `08_D104_Option_Unlocked`：后续对话选项解锁
+- [x] `01_MainScene_Enter`：从地图进入美丽理发店
+- [x] `02_MainScene_Exploration`：自由观察并选择人物或物件
+- [x] `03_Object_PriceList_Available`：价目表高亮并显示互动 Icon
+- [x] `04_Object_PriceList_Selected`：玩家聚焦或选中价目表
+- [x] `05_Object_PriceList_Inspection`：笔记本式物件信息页
+- [x] `06_Object_PriceList_AfterRead`：出现“回忆／对话”操作
+- [x] `07_MainScene_Exploration_AfterClue`：返回场景并保留已查看／已理解状态
+- [x] `08_D104_Option_Unlocked`：后续对话选项解锁
 
 # 每个状态必须回答
 

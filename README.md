@@ -31,7 +31,7 @@ yongan-street-ui-ux-design/
 
 | 页面 | 当前版本 | 设计文档 | 线框图 | 状态 |
 |---|---|---|---|---|
-| 主场景 | v0.7 | [查看文档](docs/UI/main-scene/v0.7.md) | [查看线框图](assets/wireframe/main-scene/v0.7.png) | 设计中 |
+| 主场景 | v0.7 | [查看文档](docs/UI/main-scene/v0.7.md) | [查看线框图](assets/wireframe/main-scene/v0.7.png) | 待评审 |
 
 ## 历史版本
 
@@ -59,9 +59,10 @@ yongan-street-ui-ux-design/
 - [x] 建立主场景 v0.6 Round 01 评审文档
 - [x] 完成主场景 v0.6 Round 01 Game UX 评审
 - [x] 确认并建立 v0.7 Round 01 修改清单
-- [ ] 完成 v0.7 修改清单中的 P1 项
-- [ ] 用正式线框图替换 v0.7 占位图片
-- [ ] 完善 v0.7 主场景功能与交互说明
+- [x] 完成 v0.7 修改清单中的 8 个最低状态线框
+- [x] 用正式线框图替换 v0.7 占位图片
+- [x] 完善 v0.7 主场景功能与交互说明
+- [ ] 确认 v0.7 修改清单中的系统边界与触发规则
 - [ ] 完成设计评审
 
 ## 维护者

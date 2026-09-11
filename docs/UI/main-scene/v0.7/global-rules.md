@@ -57,19 +57,19 @@
 
 ### 4.1 Scene Feedback Layout Rules
 
-| 状态 | X | Y | W | H | 对齐基准 |
-|---|---:|---:|---:|---:|---|
-| 07 自由探索 / After Clue | 610 | 816 | 700 | 72 | 完整画布中心 |
-| 08 对话模式 | 304 | 816 | 640 | 72 | 左侧 `Scene Viewport` 中心 |
+| 状态 | Scene Viewport | Feedback X | Feedback Y | Feedback W | Feedback H | 对齐基准 |
+|---|---|---:|---:|---:|---:|---|
+| 07 自由探索 / After Clue | 全画布 | 610 | 816 | 700 | 72 | 完整画布中心 |
+| 08 对话模式 | `X24 / Y88 / W1264 / H808` | 304 | 816 | 640 | 72 | 左侧 `Scene Viewport` 中心 |
 
 约束规则：
 
-- 对话模式下，`Scene Viewport` 的可见底边固定为 `Y=816`；Feedback 从该边界开始，不再覆盖场景人物。
-- Feedback 底边不得低于 `Y=888`。
-- `Global Navigation` 顶边为 `Y=920`，两者至少保留 `32px` 垂直净空。
-- 无侧边面板时以完整画布中心对齐；打开对话面板时改以左侧 `Scene Viewport` 中心对齐。
+- 对话模式采用用户手动调整后的场景尺寸：`Scene Viewport` 左上角为 `X=24 / Y=88`，宽高为 `1264 × 808px`，可见底边为 `Y=896`。
+- 08 Feedback 叠加于场景底部，底边为 `Y=888`，与 `Scene Viewport` 底边保留 `8px` 内边距。
+- `Global Navigation` 顶边为 `Y=920`，Feedback 与导航之间保留 `32px` 垂直净空。
+- 无侧边面板时以完整画布中心对齐；打开对话面板时以左侧 `Scene Viewport` 为布局基准。
 - 禁止始终使用 1920px 画布中心、手动拉伸 Feedback，或覆盖人物面部、对话选项及全局导航。
-- 普通场景最大宽度为 `700px`；对话场景最大宽度为 `640px`。
+- 普通场景最大宽度为 `700px`；对话场景固定宽度为 `640px`。
 
 ## 5. 临时状态色
 

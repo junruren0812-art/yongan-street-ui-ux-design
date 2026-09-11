@@ -16,7 +16,7 @@
 - 将 08 拆分为独立 Scene Viewport、Persistent HUD、Scene Feedback、Dialogue Panel 和 Global Navigation
 - 保留 08 既定人物 Camera Framing，使场景裁切仅作用于 Scene Viewport
 - 新增 Scene Feedback Layout Rules：07 按完整画布居中，08 按左侧 Scene Viewport 居中，并统一 32px 底部净空
-- 将 08 Scene Viewport 可见底边收至 `Y=816`，为反馈条建立独立信息带
+- 将 08 Scene Viewport 按手动调整结果更新为 `X24 / Y88 / W1264 / H808`，反馈条叠加于场景底部并保留 8px 内边距
 - 更新八状态总览图、v0.7 设计说明、修改清单和 README 索引
 
 ### 修复

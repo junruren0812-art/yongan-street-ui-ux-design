@@ -18,12 +18,14 @@ yongan-street-ui-ux-design/
 │           │       └── 2026-09-10-round-01.md
 │           ├── v0.7.md
 │           └── v0.7/
+│               ├── global-rules.md
 │               └── round-01-action-list.md
 ├── assets/
 │   └── wireframe/
 │       └── main-scene/
 │           ├── v0.6.png
-│           └── v0.7.png
+│           ├── v0.7.png
+│           └── v0.7-global-rules.png
 └── changelog.md
 ```
 
@@ -31,12 +33,12 @@ yongan-street-ui-ux-design/
 
 | 页面 | 当前版本 | 设计文档 | 线框图 | 状态 |
 |---|---|---|---|---|
-| 主场景 | v0.7 | [查看文档](docs/UI/main-scene/v0.7.md) | [查看线框图](assets/wireframe/main-scene/v0.7.png) | 设计中 |
+| 主场景 | v0.7 | [查看文档](docs/UI/main-scene/v0.7.md) | [查看线框图](assets/wireframe/main-scene/v0.7.png) | 待评审 |
 
 ## 历史版本
 
 - 主场景 v0.6：[设计文档](docs/UI/main-scene/v0.6.md) · [Figma 页面树](docs/UI/main-scene/v0.6/figma-page-tree.md) · [Figma UI 规格](docs/UI/main-scene/v0.6/figma-ui-spec.md) · [Round 01 评审](docs/UI/main-scene/v0.6/reviews/2026-09-10-round-01.md) · [线框图](assets/wireframe/main-scene/v0.6.png)
-- 主场景 v0.7：[设计文档](docs/UI/main-scene/v0.7.md) · [Round 01 修改清单](docs/UI/main-scene/v0.7/round-01-action-list.md) · [线框图](assets/wireframe/main-scene/v0.7.png)
+- 主场景 v0.7：[设计文档](docs/UI/main-scene/v0.7.md) · [全局规范](docs/UI/main-scene/v0.7/global-rules.md) · [规范板预览](assets/wireframe/main-scene/v0.7-global-rules.png) · [Round 01 修改清单](docs/UI/main-scene/v0.7/round-01-action-list.md) · [八状态线框图](assets/wireframe/main-scene/v0.7.png)
 
 ## 目录说明
 
@@ -59,9 +61,13 @@ yongan-street-ui-ux-design/
 - [x] 建立主场景 v0.6 Round 01 评审文档
 - [x] 完成主场景 v0.6 Round 01 Game UX 评审
 - [x] 确认并建立 v0.7 Round 01 修改清单
-- [ ] 完成 v0.7 修改清单中的 P1 项
-- [ ] 用正式线框图替换 v0.7 占位图片
-- [ ] 完善 v0.7 主场景功能与交互说明
+- [x] 完成 v0.7 修改清单中的 8 个最低状态线框
+- [x] 用正式线框图替换 v0.7 占位图片
+- [x] 完善 v0.7 主场景功能与交互说明
+- [x] 创建并锁定 v0.7 `00_Global_Rules`
+- [x] 按 Layer Order 拆分整理 01–07
+- [x] 拆分重搭 08 并修复场景覆盖 HUD
+- [ ] 确认 v0.7 修改清单中的系统边界与触发规则
 - [ ] 完成设计评审
 
 ## 维护者

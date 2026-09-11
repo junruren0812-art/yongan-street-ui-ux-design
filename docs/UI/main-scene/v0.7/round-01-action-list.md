@@ -20,15 +20,15 @@
 
 | ID | 来源问题 | 修改项 | 交付物 | 验收标准 | 状态 |
 |---|---|---|---|---|---|
-| V07-001 | MS-001 | 建立 Main Scene 状态表 | 状态列表与转换图 | 至少覆盖 Enter、Exploration、Dialogue、Object Available、Object Selected、Object Inspection、After Read、Return；每个状态列出允许操作 | 待处理 |
-| V07-002 | MS-001、MS-010 | 为 Exploration、Dialogue、Object Inspection 分别制作线框 | 3 组核心状态线框 | 任何一个状态下都能识别当前一级操作；无效操作被隐藏、禁用或降级 | 待处理 |
+| V07-001 | MS-001 | 建立 Main Scene 状态表 | 状态列表与转换图 | 至少覆盖 Enter、Exploration、Dialogue、Object Available、Object Selected、Object Inspection、After Read、Return；每个状态列出允许操作 | 已完成 |
+| V07-002 | MS-001、MS-010 | 为 Exploration、Dialogue、Object Inspection 分别制作线框 | 3 组核心状态线框 | 任何一个状态下都能识别当前一级操作；无效操作被隐藏、禁用或降级 | 已完成 |
 | V07-003 | MS-002 | 定义人物与物件的对象选择方式 | 输入与焦点规则 | 明确鼠标／键盘如何发现、聚焦、切换、确认对象；手柄和触屏若不在当前范围则标记待确认 | 待处理 |
-| V07-004 | MS-003 | 补齐价目表交互状态组 | 默认、高亮、聚焦、选中、已查看状态 | 玩家无需旁白即可识别价目表可互动；Icon 与当前对象有明确空间关联 | 待处理 |
+| V07-004 | MS-003 | 补齐价目表交互状态组 | 默认、高亮、聚焦、选中、已查看状态 | 玩家无需旁白即可识别价目表可互动；Icon 与当前对象有明确空间关联 | 已完成 |
 | V07-005 | MS-004 | 明确物件信息页与 Notebook 的系统关系 | 系统边界说明 | 明确两者是同一系统的不同入口，还是仅视觉语言相似；进入、返回和状态保存规则一致且无歧义 | 待确认 |
-| V07-006 | MS-005 | 定义“回忆”和“对话” | 两条交互规格 | 分别写明 Trigger、Player Action、System Response、New State、Next Available Action；不存在无意义重复操作 | 待确认 |
+| V07-006 | MS-005 | 定义“回忆”和“对话” | 两条交互规格 | 已确认“回忆”进入梦境界面；仍需补充对话结果及重复操作规则 | 部分确认 |
 | V07-007 | MS-006 | 定义价目表线索状态与 D104 解锁条件 | 状态字段与条件说明 | 明确“查看、阅读、回忆、对话”中哪一步满足条件；重复查看不会重复触发错误状态 | 待确认 |
 | V07-008 | MS-008 | 定义吴莉“倾听”和“对话”的差异 | 人物交互规格 | 玩家能预判两个行为的意图；两个行为的系统反馈和信息收益不同且合理 | 待确认 |
-| V07-009 | MS-010 | 建立状态化 HUD 控制规则 | HUD 显示矩阵 | Exploration、Dialogue、Object Inspection 状态下分别列出 `Space`、`ESC`、`E`、`Tab`和选项操作是否显示／禁用／隐藏 | 待处理 |
+| V07-009 | MS-010 | 建立状态化 HUD 控制规则 | HUD 显示矩阵 | Exploration、Dialogue、Object Inspection 状态下分别列出 `Space`、`ESC`、`E`、`Tab`和选项操作是否显示／禁用／隐藏 | 已完成 |
 
 # P2｜交互体验完善
 
@@ -39,7 +39,7 @@
 | V07-012 | MS-011 | 处理重复的 `Space 继续` | Dialogue 控制规范 | 同一状态下只有一个一级确认入口，或明确两个入口语义完全一致 | 待处理 |
 | V07-013 | MS-012 | 定义 `ESC`在各状态下的目标 | 返回规则矩阵 | Exploration、Dialogue、Object Inspection 中 `ESC`的结果唯一且可预期 | 待确认 |
 | V07-014 | MS-013 | 处理时间／时段重复信息 | HUD 信息层级调整 | 左上时间与地点标签中的“黄昏”承担不同作用，或删除无意义重复 | 待确认 |
-| V07-015 | MS-014 | 补齐关键组件坐标与约束 | Layout Spec 更新 | 标注关键组件 X/Y、锚点、Safe Area 和 8 px Grid 关系；1920×1080 下无重叠或截断 | 待处理 |
+| V07-015 | MS-014 | 补齐关键组件坐标与约束 | Layout Spec 更新 | 标注关键组件 X/Y、锚点、Safe Area 和 8 px Grid 关系；1920×1080 下无重叠或截断 | 已完成 |
 
 # 待后续页面完成后处理
 
@@ -103,12 +103,12 @@
 只有满足以下条件，Round 01 的 v0.7 修改清单才算完成：
 
 - [ ] 所有 P1 项已处理，或经设计者明确确认延期。
-- [ ] 8 个最低状态线框已完成。
+- [x] 8 个最低状态线框已完成，并按 Layer Order 拆分为可编辑结构。
 - [ ] 关键操作均具备完整反馈链。
 - [ ] 对象交互和人物交互的系统边界清晰。
-- [ ] v0.7 UI 规格已同步更新。
+- [x] v0.7 UI 规格已同步更新，新增 `00_Global_Rules`。
 - [ ] 完成 Main Scene v0.7 Round 01／Round 02 复审。
 
 ## 当前确认
 
-> 已确认将 Main Scene v0.6 Round 01 的评审问题转化为本 v0.7 修改清单。当前清单只定义需要解决的问题、验收标准与优先级，不直接替设计者决定未确认的具体实现。
+> 2026-09-11 已完成 `00_Global_Rules`、01–07 分层整理和 08 拆分重搭。08 的 Camera Framing 已限制在独立 `Scene Viewport` 中，Persistent HUD、Scene Feedback、Dialogue Panel 与 Notebook Bar 均位于场景上方，原场景遮挡 HUD 的问题已修复。未确认的系统边界与剧情触发条件仍保留为待确认。

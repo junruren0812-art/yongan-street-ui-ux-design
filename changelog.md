@@ -2,6 +2,25 @@
 
 本文件用于记录永安街游戏 UI/UX 设计版本变化，最新版本位于最上方。
 
+## 主场景 v0.7 全局规范与图层重构 — 2026-09-11
+
+### 新增
+
+- 新增 `00_Global_Rules`，锁定 1920×1080 画布、48px 安全区、8px 网格、字号、间距、圆角、描边和组件尺寸
+- 新增 Layer Order 规范与独立全局规范文档
+- 新增全局规范板预览图 `assets/wireframe/main-scene/v0.7-global-rules.png`
+
+### 调整
+
+- 按 Layer Order 将 01–07 重构为可编辑分层 Frame
+- 将 08 拆分为独立 Scene Viewport、Persistent HUD、Scene Feedback、Dialogue Panel 和 Global Navigation
+- 保留 08 既定人物 Camera Framing，使场景裁切仅作用于 Scene Viewport
+- 更新八状态总览图、v0.7 设计说明、修改清单和 README 索引
+
+### 修复
+
+- 修复 08 左侧场景图覆盖顶部标题、时间、操作提示和地点 HUD 的问题
+
 ## 主场景 v0.7 状态线框完成 — 2026-09-10
 
 ### 新增

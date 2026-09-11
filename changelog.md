@@ -15,11 +15,14 @@
 - 按 Layer Order 将 01–07 重构为可编辑分层 Frame
 - 将 08 拆分为独立 Scene Viewport、Persistent HUD、Scene Feedback、Dialogue Panel 和 Global Navigation
 - 保留 08 既定人物 Camera Framing，使场景裁切仅作用于 Scene Viewport
+- 新增 Scene Feedback Layout Rules：07 按完整画布居中，08 按左侧 Scene Viewport 居中，并统一 32px 底部净空
+- 将 08 Scene Viewport 可见底边收至 `Y=816`，为反馈条建立独立信息带
 - 更新八状态总览图、v0.7 设计说明、修改清单和 README 索引
 
 ### 修复
 
 - 修复 08 左侧场景图覆盖顶部标题、时间、操作提示和地点 HUD 的问题
+- 修复 07 Scene Feedback 与笔记本栏距离过近，以及 08 Feedback 跨入场景与对话区域的问题
 
 ## 主场景 v0.7 状态线框完成 — 2026-09-10
 

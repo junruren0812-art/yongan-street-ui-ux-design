@@ -5,7 +5,7 @@
 - 状态：已锁定，作为 01–08 精修基准
 - 更新时间：2026-09-11
 - 负责人：任俊茹
-- Figma 规范板：[00_Global_Rules](https://www.figma.com/design/hSygViz2j9LkQ419P8kHIV/Main-Scene---Wireframe-v0.6?node-id=143-921&p=f)
+- Figma 规范板：[00_Global_Rules](https://www.figma.com/design/hSygViz2j9LkQ419P8kHIV/Main-Scene---Wireframe-v0.6?node-id=143-1055&p=f)
 - 规范板预览：[v0.7-global-rules.png](../../../../assets/wireframe/main-scene/v0.7-global-rules.png)
 
 ## 1. 画布、安全区与网格
@@ -54,6 +54,22 @@
 | Dialogue / Option | 510 × 62px，选项间距 16px |
 
 单张页面不得自行缩放同名组件；需要变化时应先更新全局规范。
+
+### 4.1 Scene Feedback Layout Rules
+
+| 状态 | X | Y | W | H | 对齐基准 |
+|---|---:|---:|---:|---:|---|
+| 07 自由探索 / After Clue | 610 | 816 | 700 | 72 | 完整画布中心 |
+| 08 对话模式 | 304 | 816 | 640 | 72 | 左侧 `Scene Viewport` 中心 |
+
+约束规则：
+
+- 对话模式下，`Scene Viewport` 的可见底边固定为 `Y=816`；Feedback 从该边界开始，不再覆盖场景人物。
+- Feedback 底边不得低于 `Y=888`。
+- `Global Navigation` 顶边为 `Y=920`，两者至少保留 `32px` 垂直净空。
+- 无侧边面板时以完整画布中心对齐；打开对话面板时改以左侧 `Scene Viewport` 中心对齐。
+- 禁止始终使用 1920px 画布中心、手动拉伸 Feedback，或覆盖人物面部、对话选项及全局导航。
+- 普通场景最大宽度为 `700px`；对话场景最大宽度为 `640px`。
 
 ## 5. 临时状态色
 

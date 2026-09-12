@@ -2,10 +2,10 @@
 
 - 页面：主场景 / Main Scene
 - 版本：v0.7
-- 状态：已锁定，作为 01–08 精修基准
-- 更新时间：2026-09-11
+- 状态：已锁定，作为 01–10 精修基准
+- 更新时间：2026-09-12
 - 负责人：任俊茹
-- Figma 规范板：[00_Global_Rules](https://www.figma.com/design/hSygViz2j9LkQ419P8kHIV/Main-Scene---Wireframe-v0.6?node-id=143-1055&p=f)
+- Figma 规范板：[00_Global_Rules](https://www.figma.com/design/hSygViz2j9LkQ419P8kHIV/Main-Scene---Wireframe-v0.7?node-id=202-2&p=f)
 - 规范板预览：[v0.7-global-rules.png](../../../../assets/wireframe/main-scene/v0.7-global-rules.png)
 
 ## 1. 画布、安全区与网格

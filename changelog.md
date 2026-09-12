@@ -2,6 +2,22 @@
 
 本文件用于记录永安街游戏 UI/UX 设计版本变化，最新版本位于最上方。
 
+## 主场景 v0.7 点烟放松流程扩展 — 2026-09-12
+
+### 新增
+
+- 新增 `09_Smoking_Relaxation_QTE`，在温柔／理智线对话收束后提供一次低压力 timing QTE
+- 新增 `10_Smoking_FirstPerson_Street`，作为点烟成功后的 3–5 秒第一人称街景叙事奖励
+- 补齐 `08 → Route Check → 09 → 10 → Observation` 条件过渡，失败与跳过均无惩罚
+- 新增 09／10 的 QTE 轨道、目标区、烟条与 SKIP 组件规范
+- 新增 09／10 全屏可替换背景接口，支持按 `scene_id / time_state / weather` 接入静态图或动画
+- 将环境背景、环境动画、第一人称前景与 UI 组件拆分为独立图层，后续替换风景时无需重做 QTE、烟条、独白和 SKIP
+
+### 调整
+
+- 将 v0.7 Main Scene Flow 从八个状态扩展为十个状态
+- 将十状态总览图、全局规范、设计说明与 README 索引同步更新
+
 ## 主场景 v0.7 全局规范与图层重构 — 2026-09-11
 
 ### 新增
@@ -15,8 +31,9 @@
 - 按 Layer Order 将 01–07 重构为可编辑分层 Frame
 - 将 08 拆分为独立 Scene Viewport、Persistent HUD、Scene Feedback、Dialogue Panel 和 Global Navigation
 - 保留 08 既定人物 Camera Framing，使场景裁切仅作用于 Scene Viewport
-- 新增 Scene Feedback Layout Rules：07 按完整画布居中，08 按左侧 Scene Viewport 居中，并统一 32px 底部净空
-- 将 08 Scene Viewport 按手动调整结果更新为 `X24 / Y88 / W1264 / H808`，反馈条叠加于场景底部并保留 8px 内边距
+- 新增 Scene Feedback Layout Rules：07 与 08 保持同尺寸，位置分别按完整画布中心和左场景视觉中心对齐，并统一 32px 底部净空
+- 将 08 Scene Background 调整为与 07 一致的 `1920 × 1080` 连续场景空间，仅通过 Camera Framing 保留当前人物视觉中心
+- 将 08 Scene Feedback 保持为与 07 相同的 `700 × 72`，位置调整为 `X274 / Y816`，沿用上一版左场景视觉中心并远离对话面板
 - 更新八状态总览图、v0.7 设计说明、修改清单和 README 索引
 
 ### 修复

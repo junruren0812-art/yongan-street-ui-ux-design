@@ -52,24 +52,29 @@
 | Object / Header | 1020 × 54px |
 | Dialogue / Panel | 570 × 790px |
 | Dialogue / Option | 510 × 62px，选项间距 16px |
+| Smoking QTE / Panel | 1320 × 310px |
+| Smoking QTE / Track | 1080 × 36px |
+| Smoking QTE / Target | 默认 216 × 36px，占轨道 20%（允许 18%–22%） |
+| Smoking / Timer | 1320 × 56px |
+| SKIP | 160 × 48px |
 
 单张页面不得自行缩放同名组件；需要变化时应先更新全局规范。
 
 ### 4.1 Scene Feedback Layout Rules
 
-| 状态 | Scene Viewport | Feedback X | Feedback Y | Feedback W | Feedback H | 对齐基准 |
+| 状态 | Scene Background | Feedback X | Feedback Y | Feedback W | Feedback H | 对齐基准 |
 |---|---|---:|---:|---:|---:|---|
-| 07 自由探索 / After Clue | 全画布 | 610 | 816 | 700 | 72 | 完整画布中心 |
-| 08 对话模式 | `X24 / Y88 / W1264 / H808` | 304 | 816 | 640 | 72 | 左侧 `Scene Viewport` 中心 |
+| 07 自由探索 / After Clue | `1920 × 1080` 全画布 | 610 | 816 | 700 | 72 | 完整画布中心 |
+| 08 对话模式 | `1920 × 1080` 全画布 | 274 | 816 | 700 | 72 | 上一版左场景视觉中心 |
 
 约束规则：
 
-- 对话模式采用用户手动调整后的场景尺寸：`Scene Viewport` 左上角为 `X=24 / Y=88`，宽高为 `1264 × 808px`，可见底边为 `Y=896`。
-- 08 Feedback 叠加于场景底部，底边为 `Y=888`，与 `Scene Viewport` 底边保留 `8px` 内边距。
-- `Global Navigation` 顶边为 `Y=920`，Feedback 与导航之间保留 `32px` 垂直净空。
-- 无侧边面板时以完整画布中心对齐；打开对话面板时以左侧 `Scene Viewport` 为布局基准。
-- 禁止始终使用 1920px 画布中心、手动拉伸 Feedback，或覆盖人物面部、对话选项及全局导航。
-- 普通场景最大宽度为 `700px`；对话场景固定宽度为 `640px`。
+- 07 与 08 必须使用同一套 `1920 × 1080` 场景空间，底图连续铺满画布；对话面板、HUD 与导航叠加在底图上方，未被面板覆盖的区域不得留白。
+- 08 仅通过底图内部的 Camera Framing 调整人物视觉中心，不改变 Scene Background 的画布尺寸和边界。
+- 07 与 08 的 Scene Feedback 使用同一尺寸：`W=700 / H=72`，避免状态切换时产生缩放跳变；位置按各自视觉中心分别对齐。
+- 08 Feedback 中心点沿用上一版左侧场景视觉中心 `X=624`，因此左边界为 `X=274`；右边界为 `X=974`，与 `X=1310` 的 Dialogue Panel 保留 `336px` 水平间距。
+- `Global Navigation` 顶边为 `Y=920`，Feedback 底边为 `Y=888`，两者保留 `32px` 垂直净空。
+- 禁止为适应当前视觉中心缩小底图或 Feedback，也禁止出现空白区、覆盖人物面部、对话选项及全局导航。
 
 ## 5. 临时状态色
 
@@ -108,7 +113,7 @@
 08_D104_Option_Unlocked
 ├─ 01_Scene_Viewport
 │  ├─ Scene_Background
-│  │  └─ Left_Scene_Camera_Framing
+│  │  └─ Dialogue_Scene_Camera_Framing
 │  └─ Character_Relationship
 ├─ 02_Persistent_HUD
 │  ├─ Screen_Title
@@ -125,13 +130,47 @@
    └─ Notebook_Bar
 ```
 
-08 已完成拆分重搭：场景位于独立裁切区域，标题 HUD、时间、操作提示、地点、对话面板和笔记本均为场景上方的独立可编辑图层。原 Camera Framing 与人物关系保持不变，顶部 HUD 遮挡问题已修复。
+08 已完成拆分重搭：场景使用完整 `1920 × 1080` 背景，标题 HUD、时间、操作提示、地点、对话面板和笔记本均为场景上方的独立可编辑图层。Camera Framing 只调整视觉中心，不改变底图边界。
 
-## 8. 当前执行状态
+## 8. 09–10 点烟节点图层规则
+
+```text
+09_Smoking_Relaxation_QTE
+├─ 01_QTE_Background_Viewport
+│  ├─ Environment_Background
+│  └─ Environment_Animation
+├─ 02_Backdrop_Mask
+├─ 03_Narrative_Prompt
+├─ 04_QTE_Track
+├─ 05_Smoke_Timer
+└─ 06_Global_Navigation / SKIP
+
+10_Smoking_FirstPerson_Street
+├─ 01_First_Person_Street_Viewport
+│  ├─ Environment_Background
+│  ├─ Environment_Animation
+│  └─ FirstPerson_Foreground
+├─ 02_Inner_Monologue
+├─ 03_Smoke_Timer
+└─ 04_Global_Navigation / SKIP
+```
+
+执行原则：
+
+- 09 的 QTE 是单次、低压力操作；失败不得使用红色惩罚反馈，也不得要求重试。
+- 09、10 的烟条使用同一位置和尺寸，避免成功切换时跳动。
+- 09 的 `QTE_Background_Viewport` 与 10 的 `First_Person_Street_Viewport` 均固定为 `X0 / Y0 / W1920 / H1080`，作为可替换背景接口。
+- `Environment_Background` 接收按时间加载的静态图；`Environment_Animation` 接收视频、序列帧或 Timeline 动画，二者不得包含 QTE、烟条、独白或 SKIP。
+- 10 的 `FirstPerson_Foreground` 独立承载手部、香烟和烟雾，替换环境动画时不得重做前景 UI。
+- 10 的第一人称街景必须铺满画布；手部、香烟与烟雾属于主观视角前景层。
+- `SKIP` 始终位于右上安全区内，层级高于 QTE、独白和场景。
+
+## 9. 当前执行状态
 
 - [x] 创建并锁定 `00_Global_Rules`
 - [x] 按规则整理 01–07 图层
 - [x] 拆分重搭 08 合成 UI
 - [x] 修复 08 场景覆盖 HUD 的问题
+- [x] 新增 09 点烟 QTE 与 10 第一人称街景图层规则
 - [ ] 逐张进行内容、尺寸与文案精修
-- [ ] 八张完成后统一配色
+- [ ] 十张完成后统一配色

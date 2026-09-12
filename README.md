@@ -38,7 +38,7 @@ yongan-street-ui-ux-design/
 ## 历史版本
 
 - 主场景 v0.6：[设计文档](docs/UI/main-scene/v0.6.md) · [Figma 页面树](docs/UI/main-scene/v0.6/figma-page-tree.md) · [Figma UI 规格](docs/UI/main-scene/v0.6/figma-ui-spec.md) · [Round 01 评审](docs/UI/main-scene/v0.6/reviews/2026-09-10-round-01.md) · [线框图](assets/wireframe/main-scene/v0.6.png)
-- 主场景 v0.7：[设计文档](docs/UI/main-scene/v0.7.md) · [全局规范](docs/UI/main-scene/v0.7/global-rules.md) · [规范板预览](assets/wireframe/main-scene/v0.7-global-rules.png) · [Round 01 修改清单](docs/UI/main-scene/v0.7/round-01-action-list.md) · [十状态线框图](assets/wireframe/main-scene/v0.7.png)
+- 主场景 v0.7：[Figma](https://www.figma.com/design/hSygViz2j9LkQ419P8kHIV/Main-Scene---Wireframe-v0.7?node-id=202-2&p=f) · [设计文档](docs/UI/main-scene/v0.7.md) · [全局规范](docs/UI/main-scene/v0.7/global-rules.md) · [规范板预览](assets/wireframe/main-scene/v0.7-global-rules.png) · [Round 01 修改清单](docs/UI/main-scene/v0.7/round-01-action-list.md) · [十状态线框图](assets/wireframe/main-scene/v0.7.png)
 
 ## 目录说明
 
@@ -68,6 +68,7 @@ yongan-street-ui-ux-design/
 - [x] 按 Layer Order 拆分整理 01–07
 - [x] 拆分重搭 08 并修复场景覆盖 HUD
 - [x] 新增 09 点烟 QTE 与 10 第一人称街景，补齐 08→09→10 条件过渡
+- [x] 将 Figma 文件更新为 `Main Scene / Wireframe v0.7`，同步 GitHub 文档与 PNG 迭代记录
 - [ ] 确认 v0.7 修改清单中的系统边界与触发规则
 - [ ] 完成设计评审
 
